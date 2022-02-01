@@ -1,0 +1,26 @@
+.full-width{
+    width: max-content;
+}
+
+.top-padding{
+    padding-top: 3px;
+}
+.form-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+mat-card-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(83, 0, 190);
+}
+mat-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

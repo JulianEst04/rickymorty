@@ -1,0 +1,14 @@
+.navbar {
+    justify-content: space-between;
+    background-color: rgb(144, 140, 150);
+}
+span{
+    padding-right: 1rem;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}
+.material-icons{
+    font-size: 30px;
+    
+}
+

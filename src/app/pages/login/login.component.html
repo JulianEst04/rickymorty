@@ -1,0 +1,57 @@
+<form class="form-container animated fadeIn Left" [formGroup]="forma" (ngSubmit)="entrar()">
+    <mat-card class="mat-elevation-z20">
+        <mat-card-header>
+            <mat-card-title style="font-size: 25px;">INGRESA</mat-card-title>
+        </mat-card-header>
+      <mat-card-content>
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-form-field appearance="outline" style="width: 350px; display: block; padding-bottom: 0;" class="full-width">
+                        <mat-label>
+                         Usuario   
+                        </mat-label>
+                        <input 
+                            formControlName="username"
+                            matInput
+                            type:text 
+                            placeholder="usuario-correo electronico."
+                            [class.is-invalid]="nombreNoValido"
+                        >
+                    </mat-form-field>
+                    <mat-hint *ngIf="contrasenaNoValido" class="text-danger">
+                        Ingrese contraseña.
+                    </mat-hint> 
+                </div>
+                <div class="col-md-6">
+                    <mat-form-field appearance="outline" style="width: 350px; display: block; padding-bottom: 0;" class="full-width">
+                        <mat-label>
+                            Contraseña   
+                        </mat-label>
+                        <input  
+                            formControlName="password" 
+                            matInput 
+                            placeholder="Contraseña."
+                            type="password"
+                            [class.is-invalid]="contrasenaNoValido"
+                        >
+                        <mat-hint *ngIf="contrasenaNoValido" class="text-danger">
+                            Ingrese contraseña.
+                        </mat-hint>
+                    </mat-form-field>
+                     
+                </div>
+            </div>  
+        </mat-card-content>
+            <div class="row">
+                <mat-card-actions>
+                    <button style="width:max-content;" type="submit" mat-raised-button color="primary">Ingresar</button>
+                </mat-card-actions>
+            </div>
+            <div>
+                <a routerLink="/register">
+                    ¿Posees una cuenta? - Registrate.
+                </a>
+            </div>
+    </mat-card>
+</form>
+

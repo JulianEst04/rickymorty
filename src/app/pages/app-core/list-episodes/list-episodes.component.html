@@ -1,0 +1,32 @@
+<div class="cards mat-elevation-z8" >
+    <ng-container>
+      <mat-card class="card mat-elevation-z8" *ngFor="let episodiosResult of listEpisodesFilter">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title> Episodio: {{episodiosResult.name}}</mat-card-title>
+          <mat-card-subtitle>Episodio #{{episodiosResult.id}}</mat-card-subtitle>
+          <mat-card-subtitle>Fecha de lanzamiento:
+            {{episodiosResult.air_date}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="episodiosResult.url" alt="">
+        <mat-card-content>
+        </mat-card-content>
+        <div class="containerButton">
+          <mat-card-actions>
+            <button (click)="openModalListEpisodes(episodiosResult)" color="primary" mat-raised-button>Ver personajes</button>
+          </mat-card-actions>  
+        </div>
+      </mat-card>
+    </ng-container>
+    <mat-paginator class="animated fadeIn rigth" [length]="listEpisodes.length"
+              [pageSize]="size"
+              [pageIndex]="page"
+              [pageSizeOptions]="[4, 8, 12]"
+              (page)="getData($event)">
+    </mat-paginator>
+   
+</div>
+
+
+  
+  

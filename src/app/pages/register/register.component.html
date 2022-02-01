@@ -1,0 +1,113 @@
+
+<form class="form-container animated fadeIn Right"[formGroup]="forma" (ngSubmit)="guardar()">
+    <mat-card class="mat-elevation-z20">
+        <mat-card-header>
+            <mat-card-title style="font-size: 25px;">REGISTRAR</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-form-field appearance="outline" style="width: 350px; display: block; padding-bottom: 0;" class="full-width">
+                        <mat-label>
+                            Nombre   
+                        </mat-label>
+                        <input 
+                            formControlName="nombre"
+                            matInput
+                            type:text 
+                            placeholder="Nombres."
+                            [class.is-invalid]="nombreNoValido"
+                        
+                        >
+                        <small *ngIf="nombreNoValido" class="text-danger">
+                            Ingrese 5 letras.
+                        </small> 
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                    <mat-form-field appearance="outline" style="width: 350px; display: block; padding-bottom: 0;" class="full-width">
+                        <mat-label>
+                            Apellido   
+                        </mat-label>
+                        <input  
+                            formControlName="apellido" 
+                            matInput 
+                            placeholder="Apellidos."
+                            type="text"
+                            [class.is-invalid]="apellidoNoValido"
+                        
+                        >
+                        <small *ngIf="apellidoNoValido" class="text-danger">
+                            Ingrese 5 letras.
+                        </small> 
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                    <mat-form-field appearance="outline" style="width: 350px; display: block; padding-bottom: 0;" class="full-width">
+                        <mat-label>
+                            Documento   
+                        </mat-label>
+                        <input  
+                            formControlName="doctoIdent" 
+                            matInput
+                            type="text" 
+                            placeholder="Documento identidad."
+                            [class.is-invalid]="documentoNoValido"
+                        >
+                        <small *ngIf="documentoNoValido" class="text-danger">
+                            Ingrese documento.
+                        </small> 
+                    </mat-form-field>
+                </div>
+                    <div class="col-sm-6">
+                        <mat-form-field appearance="outline" style="width: 350px; display: block; padding-bottom: 0;" class="full-width">
+                            <mat-label>
+                                Correo   
+                            </mat-label>
+                        <input  
+                            formControlName="email" 
+                            matInput 
+                            placeholder="correo"
+                            [class.is-invalid]="correoNoValido"
+                        
+                        >
+                        <small *ngIf="correoNoValido" class="text-danger">
+                            Ingrese correo valido.
+                        </small> 
+                    </mat-form-field>
+                    </div>
+            </div>  
+            <div class="col-md-6">
+                <mat-form-field appearance="outline" style="width: 350px; display: block; padding-bottom: 0;" class="full-width">
+                    <mat-label>
+                        Clave   
+                    </mat-label>
+                <input  
+                    formControlName="clave" 
+                    type="password" matInput 
+                    placeholder="Clave."
+                    [class.is-invalid]="claveNoValido"
+                
+                >
+                <small *ngIf="claveNoValido" class="text-danger">
+                    Ingrese 5 caractéres.
+                </small>
+                </mat-form-field>
+            </div>
+        </mat-card-content>
+            <div class="row">
+                <mat-card-actions>
+                    <button style="width:max-content;" type="submit" mat-raised-button color="primary">Registrarse</button>
+                </mat-card-actions>
+            </div>
+            <div>
+                <a routerLink="/">
+                    ¿Posees cuenta? - Ingresa
+                </a>
+            </div>
+    </mat-card>
+</form>
+
+    
+
+

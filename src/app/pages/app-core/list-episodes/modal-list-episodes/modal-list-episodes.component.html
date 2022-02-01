@@ -1,0 +1,21 @@
+
+
+
+<div mat-dialog-content>
+    <h1>Lista de personajes</h1>
+        <ng-container *ngFor="let image of charactersDetail.characters; let i = index;">
+            <div class="cards mat-elevation-z8" >
+                <mat-card class="card mat-elevation-z8" *ngIf="i != 0">
+                    <img class="image" mat-card-image *ngIf="i != 0" src="https://rickandmortyapi.com/api/character/avatar/{{i+'.jpeg'}}" alt="imageCharacter">
+                </mat-card>
+                <div class="containerButton" *ngIf="i != 0">
+                    <button class="buttonFavorites" color="primary" mat-raised-button>Añadir a favoritos.</button>
+                </div>
+                
+            </div>
+        </ng-container> 
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div>
